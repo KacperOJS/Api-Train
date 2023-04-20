@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>   </pre>
+    <script>
+        const items=[
+            {name:'Ryszard',price:200 },
+            {name:'dawid',price:5 },
+            {name:'barts',price:300 },
+            {name:'dadssa',price:2 },
+            {name:'wer',price:1000 },
+            {name:'part',price:100003 },
+    ]
+
+    let list= " ";
+    items.forEach((item)=>{
+        list +=`<p>${item.price}<p>`
+    
+        
+    })
+    document.querySelector('pre').innerHTML = list
+
+    const zmiennaMap = items.map((zm)=>{
+            return zm.price
+            
+    })
+    console.log(zmiennaMap)
+
+
+    const filterFinder =items.filter(item=>{
+        return item.price>=100;
+    })
+
+    console.log(filterFinder)
+
+    //find
+    /*
+    const findMethod = items.find(item =>{
+    
+        if(item.name===undefined){
+            console.log("There is no item in our shop")
+        }else{
+            console.log('There is an item')
+        }
+        
+    })
+    */
+    /*const HasExpensiveItem = items.some((item)=>{
+        console.log(item.price>=100) 
+        
+    })
+    */
+
+    const total = items.reduce((current,item)=>{
+        return item.price + current
+    },0)
+    
+console.log(total)
+
+    </script>
+</body>
+</html>
