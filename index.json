@@ -1,0 +1,27 @@
+{
+
+"users" :[ 
+    {
+    
+        "name":"Kacper",
+        "Surname":"Odziemczyk",
+        "Years":18,
+        "height":179,
+        "ratio":"Junior-Frontend-Developer"
+    },
+    {
+        "name":"Mateusz",
+        "Surname":"Wyspianski",
+        "Years":20,
+        "height":182,
+        "ratio":"Junior-Frontend-Developer"
+    },
+    {
+        "name":"Radosław",
+        "Surname":"Bielicki",
+        "Years":15,
+        "height":175,
+        "ratio":"Junior-Frontend-Developer"
+    }
+]
+}

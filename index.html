@@ -7,27 +7,82 @@
     <title>Document</title>
 </head>
 <body>
+    <center>
+    <H1>Frontend Developers</H1>
+    <pre>
+
+
+    </pre>
     <script>
-const persons= [{
-    name:'Florin',
-    age:25
-},
-{
-    name:'Augusto',
-    age:23
-},
-{
-    name:'Kacper',
-    age:18
-},
-];
+        /*let users={
 
-const age1 = persons.find((x)=>{
-    return x.name ==='Kacper';
+"users" :[ 
+    {
+    
+        "name":"Kacper",
+        "Surname":"Odziemczyk",
+        "Years":18,
+        "height":179,
+        "ratio":"Junior-Frontend-Developer"
+    },
+    {
+        "name":"Mateusz",
+        "Surname":"Wyspianski",
+        "Years":20,
+        "height":182,
+        "ratio":"Junior-Frontend-Developer"
+    },
+    {
+        "name":"Radosław",
+        "Surname":"Bielicki",
+        "Years":15,
+        "height":175,
+        "ratio":"Junior-Frontend-Developer"
+    }
+]
 
-})
-console.log(age1);
 
+}
+
+//let userString= `{"users":[{"name":"Kacper","Surname":"Odziemczyk","Years":18,"height":179,"ratio":"Junior-Frontend-Developer"},{"name":"Mateusz","Surname":"Wyspianski","Years":20,"height":182,"ratio":"Junior-Frontend-Developer"},{"name":"Radosław","Surname":"Bielicki","Years":15,"height":175,"ratio":"Junior-Frontend-Developer"}]}`
+
+//console.log(JSON.parse(userString));
+
+       /*let tablica=[
+                        {
+                            "name":"Kacper",
+                            "Surname":"Odziemczyk",
+                            "Years":18,
+                            "height":179,
+                            "ratio":"Junior-Frontend-Developer",
+                        },
+                        {
+                            "name":"Mateusz",
+                            "Surname":"Wyspianski",
+                            "Years":20,
+                            "height":182,
+                            "ratio":"Junior-Frontend-Developer",
+                        },
+                        {
+                            "name":"Radosław",
+                            "Surname":"Bielicki",
+                            "Years":15,
+                            "height":175,
+                            "ratio":"Junior-Frontend-Developer",
+                        },
+    ]*/
+    let list = "";
+    
+    fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(response =>response.json())
+    .then(json=>{
+        json.forEach(todo =>{
+            list += `<p>${todo.title}</p>`
+        });
+        document.querySelector("pre").innerHTML=list
+        console.log(json)
+    })
+    
     </script>
 </body>
 </html>
